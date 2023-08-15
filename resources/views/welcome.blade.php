@@ -342,33 +342,187 @@
                 </button>
             </div>
         </div>
-        
+
     </div>
-    </div>
+    <!--partnters-->
     <div class="partners flex items-center justify-center  ">
         <div class="relative overflow-hidden">
-        
-          <div class="flex items-center justify-center h-full">
-            <div class="grid grid-cols-5 gap-1">
-              <div class="aspect-w-1 aspect-h-1 overflow-hidden">
-                <img class="object-cover w-full h-full" src="{{ asset('partners/par3.png') }}" alt="Image 1">
-              </div>
-              <div class="aspect-w-1 aspect-h-1 overflow-hidden">
-                <img class="object-cover w-full h-full" src="{{ asset('partners/par2.png') }}" alt="Image 2">
-              </div>
-              <div class="aspect-w-1 aspect-h-1 overflow-hidden">
-                <img class="object-cover w-full h-full" src="{{ asset('partners/par1.png') }}" alt="Image 3">
-              </div>
-              <div class="aspect-w-1 aspect-h-1 overflow-hidden">
-                <img class="object-cover w-full h-full" src="{{ asset('partners/par4.png') }}" alt="Image 4">
-              </div>
-              <div class="aspect-w-1 aspect-h-1 overflow-hidden">
-                <img class="object-cover w-full h-full" src="{{ asset('partners/par5.png') }}" alt="Image 5">
-              </div>
+
+            <div class="flex items-center justify-center h-full">
+                <div class="grid grid-cols-5 gap-1">
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden">
+                        <img class="object-cover w-full h-full" src="{{ asset('partners/par3.png') }}"
+                            alt="Image 1">
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden">
+                        <img class="object-cover w-full h-full" src="{{ asset('partners/par2.png') }}"
+                            alt="Image 2">
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden">
+                        <img class="object-cover w-full h-full" src="{{ asset('partners/par1.png') }}"
+                            alt="Image 3">
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden">
+                        <img class="object-cover w-full h-full" src="{{ asset('partners/par4.png') }}"
+                            alt="Image 4">
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden">
+                        <img class="object-cover w-full h-full" src="{{ asset('partners/par5.png') }}"
+                            alt="Image 5">
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
     </div>
+    <!--aboutus-->
+    <section class="flex items-center bg-stone-100 lg:h-screen font-poppins dark:bg-gray-800">
+        <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="relative px-4 mb-10">
+                    <img src="https://i.postimg.cc/HsSPvTq8/pexels-fauxels-3184357.jpg" alt=""
+                        class="relative z-40 object-cover w-full rounded-md md:h-96 h-44">
+                    <div class="absolute top-0 right-0 items-center justify-center hidden -mt-16 lg:inline-flex">
+                    </div>
+                </div>
+                <div class="px-2 sm:px-4 mb-6 sm:mb-10">
+                    <h2 class="mb-2 text-xl md:text-3xl lg:text-4xl sm:mb-4"
+                        style="color: #052851;
+                        font-family: Outfit;
+                        font-size: 44px;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 140%;">
+                        We are the Leader in the real estate business
+                    </h2>
+                    <p class="mb-4 text-sm md:text-base lg:text-lg sm:mb-6"
+                        style="color: #787878;
+                        font-family: Outfit;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;">
+                        HouseLink is a leading Moroccan company that provides an easy and efficient platform for buying,
+                        selling, and renting properties. With a strong focus on customer satisfaction, we strive to make
+                        the process of property transactions seamless and convenient for our clients.
+                    </p>
+                    {{-- <div class="flex flex-col md:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
+                        <div class="text-center md:text-left flex-initial"> <!-- Add 'flex-initial' class -->
+                            <h3 class="text-base md:text-lg lg:text-xl text-blue-700 font-outfit font-semibold">
+                                +120
+                            </h3>
+                            <p class="text-sm md:text-base lg:text-lg text-gray-700 font-outfit font-medium capitalize">
+                                Business Done
+                            </p>
+                        </div>
+                        <div class="text-center md:text-left flex-initial"> <!-- Add 'flex-initial' class -->
+                            <h3 class="text-base md:text-lg lg:text-xl text-blue-700 font-outfit font-semibold">
+                                +220
+                            </h3>
+                            <p class="text-sm md:text-base lg:text-lg text-gray-700 font-outfit font-medium capitalize">
+                                happy clients
+                            </p>
+                        </div>
+                        <div class="text-center md:text-left flex-initial"> <!-- Add 'flex-initial' class -->
+                            <h3 class="text-base md:text-lg lg:text-xl text-blue-700 font-outfit font-semibold">
+                                +5
+                            </h3>
+                            <p class="text-sm md:text-base lg:text-lg text-gray-700 font-outfit font-medium capitalize">
+                                Partnerships
+                            </p>
+                        </div>
+                        <div class="text-center md:text-left flex-initial"> <!-- Add 'flex-initial' class -->
+                            <h3 class="text-base md:text-lg lg:text-xl text-blue-700 font-outfit font-semibold">
+                                +100
+                            </h3>
+                            <p class="text-sm md:text-base lg:text-lg text-gray-700 font-outfit font-medium capitalize">
+                                available property
+                            </p>
+                        </div>
+                    </div> --}}
+                    <div class="flex flex-col sm:flex-row gap-8">
+                        <div class="text-center sm:text-left md:w-1/4 lg:w-1/4">
+                            <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl"
+                                style="color: #052851;
+                                font-family: Outfit;
+                                font-weight: 600;
+                                line-height: normal;">
+                                +120
+                            </h3>
+                            <p class="text-sm sm:text-base md:text-base lg:text-lg"
+                                style="color: #787878;
+                                font-family: Outfit;
+                                font-weight: 600;
+                                line-height: normal;
+                                text-transform: capitalize;">
+                                Business Done
+                            </p>
+                        </div>
+                        <div class="text-center sm:text-left md:w-1/4 lg:w-1/4">
+                            <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl"
+                                style="color: #052851;
+                                font-family: Outfit;
+                                font-weight: 600;
+                                line-height: normal;">
+                                +220
+                            </h3>
+                            <p class="text-sm sm:text-base md:text-base lg:text-lg"
+                                style="color: #787878;
+                                font-family: Outfit;
+                                font-weight: 600;
+                                line-height: normal;
+                                text-transform: capitalize;">
+                                happy clients
+                            </p>
+                        </div>
+                        <div class="text-center sm:text-left md:w-1/4 lg:w-1/4">
+                            <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl"
+                                style="color: #052851;
+                                font-family: Outfit;
+                                font-weight: 600;
+                                line-height: normal;">
+                                +5
+                            </h3>
+                            <p class="text-sm sm:text-base md:text-base lg:text-lg"
+                                style="color: #787878;
+                                font-family: Outfit;
+                                font-weight: 600;
+                                line-height: normal;
+                                text-transform: capitalize;">
+                                Partnerships
+                            </p>
+                        </div>
+                        <div class="text-center sm:text-left md:w-1/4 lg:w-1/4">
+                            <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl"
+                                style="color: #052851;
+                                font-family: Outfit;
+                                font-weight: 600;
+                                line-height: normal;">
+                                +100
+                            </h3>
+                            <p class="text-sm sm:text-base md:text-base lg:text-lg"
+                                style="color: #787878;
+                                font-family: Outfit;
+                                font-weight: 600;
+                                line-height: normal;
+                                text-transform: capitalize;">
+                                available property
+                            </p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    </div>
+
 
 
 
