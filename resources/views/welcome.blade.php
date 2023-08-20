@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>HouseLink</title>
+    <title>Laravel</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -91,64 +91,60 @@
                         @endif
                     @else
                         <!-- Profil -->
-                        <div class="flex sm:items-center">
-                            <x-dropdown align="right" width="48">
-                                <x-slot name="trigger">
-                                    <button
-                                        class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                                        <div class="relative">
-                                            <img class="object-cover w-10 h-10 rounded-full ring ring-gray-300"
-                                                src="{{ asset('usersImg/' . Auth::user()->image) }}" alt="User Image">
-                                            <span
-                                                class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 ring-1 ring-white"></span>
-                                        </div>
-                                    </button>
-                                </x-slot>
-                                <x-slot name="content">
-                                    <div
-                                        class="flex items-center p-3 -mt-2 text-sm text-gray-600 transition-colors duration-300 transform">
-                                        <div class="mx-1">
-                                            <h1 class="text-sm font-semibold text-gray-700 ">
-                                                {{ Auth::user()->name }}
-                                            </h1>
-                                            <p class="text-sm text-gray-500 ">{{ Auth::user()->email }}</p>
-                                        </div>
+
+                        <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown"
+                            data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer"
+                            src="/docs/images/people/profile-picture-5.jpg" alt="User dropdown">
+
+                        <!-- Dropdown menu -->
+                        <div id="userDropdown"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
+
+                            <ul class="py-2 text-sm text-gray-700 " aria-labelledby="avatarButton">
+                                <div
+                                    class="flex items-center p-3 -mt-2 text-sm text-gray-600 transition-colors duration-300 transform">
+                                    <div class="mx-1">
+                                        <h1 class="text-sm font-semibold text-gray-700 ">
+                                            {{ Auth::user()->name }}
+                                        </h1>
+                                        <p class="text-sm text-gray-500 ">{{ Auth::user()->email }}</p>
                                     </div>
-                                    <hr>
-                                    <x-dropdown-link :href="route('#')">
-                                        {{ __('Profile') }}
+                                </div>
+                                <hr>
+                                <x-dropdown-link :href="url('/profile')">
+                                    {{ __('Profile') }}
+                                </x-dropdown-link>
+                                <x-dropdown-link :href="url('/')">
+                                    {{ __('Home') }}
+                                </x-dropdown-link>
+
+                                @auth
+                                    @if (Auth::user()->role === 'user')
+                                        {{-- <x-dropdown-link :href="route('#')">
+                                            {{ __('Orders') }}
+                                            </x-nav-link> --}}
+                                        @else
+                                            <x-dropdown-link :href="url('/dashboard')">
+
+                                                {{ __('Dashboard') }}
+                                            </x-dropdown-link>
+                                    @endif
+                                @endauth
+                            </ul>
+                            <div class="py-1">
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                    <x-dropdown-link :href="route('logout')"
+                                        onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                        {{ __('Log Out') }}
                                     </x-dropdown-link>
-                                    <x-dropdown-link :href="route('#')">
-                                        {{ __('Home') }}
-                                    </x-dropdown-link>
-
-                                    @auth
-                                        @if (Auth::user()->role === 'user')
-                                            <x-dropdown-link :href="route('#')">
-                                                {{ __('Orders') }}
-                                                </x-nav-link>
-                                            @else
-                                                <x-dropdown-link :href="route('#')">
-
-                                                    {{ __('Dashboard') }}
-                                                </x-dropdown-link>
-                                        @endif
-                                    @endauth
-
-                                    <hr>
-                                    <!-- Authentication -->
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-
-                                        <x-dropdown-link :href="route('logout')"
-                                            onclick="event.preventDefault();
-                                                    this.closest('form').submit();">
-                                            {{ __('Log Out') }}
-                                        </x-dropdown-link>
-                                    </form>
-                                </x-slot>
-                            </x-dropdown>
+                                </form>
+                            </div>
                         </div>
+
                     @endguest
 
                     <!-- drawer init and toggle -->
@@ -790,7 +786,7 @@
                                                     <p>4.5</p>
                                                 </li>
                                             </ul>
-                                            <p class="text-xs font-thin text-gray-400 dark:text-gray-400">
+                                            <p class="text-xs font-thin text-gray-400 text-gray-400">
                                                 2h ago
                                             </p>
                                         </div>
@@ -899,7 +895,7 @@
                                                     <p>4.5</p>
                                                 </li>
                                             </ul>
-                                            <p class="text-xs font-thin text-gray-400 dark:text-gray-400">
+                                            <p class="text-xs font-thin text-gray-400 text-gray-400">
                                                 2h ago
                                             </p>
                                         </div>
@@ -1008,7 +1004,7 @@
                                                     <p>4.5</p>
                                                 </li>
                                             </ul>
-                                            <p class="text-xs font-thin text-gray-400 dark:text-gray-400">
+                                            <p class="text-xs font-thin text-gray-400 text-gray-400">
                                                 2h ago
                                             </p>
                                         </div>
@@ -1117,7 +1113,7 @@
                                                     <p>4.5</p>
                                                 </li>
                                             </ul>
-                                            <p class="text-xs font-thin text-gray-400 dark:text-gray-400">
+                                            <p class="text-xs font-thin text-gray-400 text-gray-400">
                                                 2h ago
                                             </p>
                                         </div>
@@ -1226,7 +1222,7 @@
                                                     <p>4.5</p>
                                                 </li>
                                             </ul>
-                                            <p class="text-xs font-thin text-gray-400 dark:text-gray-400">
+                                            <p class="text-xs font-thin text-gray-400 text-gray-400">
                                                 2h ago
                                             </p>
                                         </div>
@@ -1452,16 +1448,17 @@
         </div>
     </div>
     <!-- Footer Section -->
-    <section class="flex flex-col  lg:justify-end font-poppins">
-        <div class="w-full bg-gray-900 pt-11 ">
+
+    <section class="flex flex-col lg:justify-end font-poppins bg-gray-900">
+        <div class="w-full pt-11">
             <div class="justify-center flex-1 max-w-6xl px-4 py-4 mx-auto lg:py-0">
-                <div
-                    class="flex items-center justify-center pb-3 border-b border-gray-300 dark:border-gray-700 lg:justify-between">
+                <div class="flex items-center justify-center pb-3 border-b border-gray-700 lg:justify-between">
                     <div class="hidden mr-12 lg:block">
-                        <span class="text-gray-700 dark:text-gray-400">Get connected with us</span>
+                        <span class="text-gray-400">Get connected with us</span>
                     </div>
-                    <div class="flex justify-center ">
-                        <a href="#" class="mr-6 text-gray-600 dark:text-gray-400 hover:text-blue-700">
+                    <div class="flex justify-center">
+                        <a href="#" class="mr-6 text-gray-400 hover:text-blue-700">
+                            <!-- Facebook Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="w-5 h-5 bi bi-facebook" viewBox="0 0 16 16">
                                 <path
@@ -1469,7 +1466,8 @@
                                 </path>
                             </svg>
                         </a>
-                        <a href="#" class="mr-6 text-gray-600 dark:text-gray-400 hover:text-blue-400">
+                        <a href="#" class="mr-6 text-gray-400 hover:text-blue-400">
+                            <!-- Twitter Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="w-5 h-5 bi bi-twitter" viewBox="0 0 16 16">
                                 <path
@@ -1477,7 +1475,8 @@
                                 </path>
                             </svg>
                         </a>
-                        <a href="#" class="mr-6 text-gray-600 dark:text-gray-400 hover:text-red-600">
+                        <a href="#" class="mr-6 text-gray-400 hover:text-red-600">
+                            <!-- Google Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="w-5 h-5 bi bi-google" viewBox="0 0 16 16">
                                 <path
@@ -1485,7 +1484,8 @@
                                 </path>
                             </svg>
                         </a>
-                        <a href="#" class="mr-6 text-gray-600 dark:text-gray-400 hover:text-blue-600">
+                        <a href="#" class="mr-6 text-gray-400 hover:text-blue-600">
+                            <!-- LinkedIn Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class=" w-5 h-5 bi bi-linkedin" viewBox="0 0 16 16">
                                 <path
@@ -1497,80 +1497,76 @@
                 </div>
                 <div class="flex flex-wrap py-10 -mx-3">
                     <div class="w-full px-4 mb-11 md:w-1/2 lg:w-4/12 lg:mb-0">
-                        <a href="#" class="inline-block mb-4 text-2xl font-bold dark:text-gray-400">
-
+                        <a href="#" class="inline-block mb-4 text-2xl font-bold text-gray-400">
                             <img src="{{ asset('logo.png') }}" class="h-20 mr-8" alt="houseLink Logo" />
                             <span
                                 class="self-center text-2xl font-semibold whitespace-nowrap text-white">HouseLink</span>
-
                         </a>
-                        <p class="text-base font-normal leading-6 lg:w-64 dark:text-gray-400">
+                        <p class="text-base font-normal leading-6 lg:w-64 text-gray-400">
                             Lorem ipsum dor amet Lorem ipsum dor amet Lorem ipsum dor Lorem ipsum dor amet Lorem ipsum
                             dor amet Lorem ipsum dor
                         </p>
                     </div>
                     <div class="w-full px-4 md:w-1/4 lg:w-2/12 mb-11 lg:mb-0">
-                        <h2 class="mb-4 text-lg font-bold text-gray-800 dark:text-gray-400">Recent Posts</h2>
+                        <h2 class="mb-4 text-lg font-bold text-gray-800 text-gray-400">Recent Posts</h2>
                         <ul>
                             <li class="mb-4">
-                                <a href="#"
-                                    class="inline-block text-base font-normal dark:text-gray-400">Home</a>
+                                <a href="#" class="inline-block text-base font-normal text-gray-400">Home</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#" class="inline-block text-base font-normal dark:text-gray-400">About
+                                <a href="#" class="inline-block text-base font-normal text-gray-400">About
                                     Us</a>
                             </li>
                             <li class="mb-4">
                                 <a href="#"
-                                    class="inline-block text-base font-normal dark:text-gray-400">Features</a>
+                                    class="inline-block text-base font-normal text-gray-400">Features</a>
                             </li>
                         </ul>
                     </div>
                     <div class="w-full px-4 mb-11 lg:mb-0 md:w-1/4 lg:w-2/12">
-                        <h2 class="mb-4 text-base font-bold text-gray-800 dark:text-gray-400">Recent Posts</h2>
+                        <h2 class="mb-4 text-base font-bold text-gray-800 text-gray-400">Recent Posts</h2>
                         <ul>
                             <li class="mb-4">
-                                <a href="#"
-                                    class="inline-block text-base font-normal dark:text-gray-400">Home</a>
+                                <a href="#" class="inline-block text-base font-normal text-gray-400">Home</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#" class="inline-block text-base font-normal dark:text-gray-400">About
+                                <a href="#" class="inline-block text-base font-normal text-gray-400">About
                                     Us</a>
                             </li>
                             <li class="mb-4">
                                 <a href="#"
-                                    class="inline-block text-base font-normal dark:text-gray-400">Features</a>
+                                    class="inline-block text-base font-normal text-gray-400">Features</a>
                             </li>
                         </ul>
                     </div>
-
                     <div class="w-full px-4 mb-2 lg:mb-0 md:w-1/3 lg:w-4/12">
-                        <h2 class="mb-4 text-lg font-bold text-gray-800 dark:text-gray-400">Newsletter</h2>
+                        <h2 class="mb-4 text-lg font-bold text-gray-400">Newsletter</h2>
                         <div class="flex flex-wrap">
                             <div class="w-full py-1 mb-2 lg:flex-1 lg:py-0 lg:mr-3 lg:mb-0">
                                 <input type="email "
-                                    class="inline-block w-full h-12 px-3 text-gray-700 placeholder-gray-500 border rounded-md dark:placeholder-gray-400 dark:text-gray-400 dark:border-gray-700 dark:bg-gray-700"
+                                    class="inline-block w-full h-12 px-3 placeholder-gray-400 border rounded-md text-gray-400 border-gray-700 bg-gray-700"
                                     placeholder="Your email">
                             </div>
                             <div class="w-full py-1 lg:w-auto lg:py-0">
                                 <a href="#"
-                                    class="inline-block w-full px-5 py-4 font-medium leading-4 text-center bg-blue-200 rounded-md dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 hover:bg-blue-300">Subscribe</a>
+                                    class="inline-block w-full px-5 py-4 font-medium leading-4 text-center rounded-md bg-gray-700 text-gray-400 hover:bg-gray-800 hover:bg-blue-300">Subscribe</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="py-6 text-center  dark:text-gray-400">
-                    <span>© Copyright {{ date('Y') }}. All Rights Reserved</span>
+                <div class="py-6 text-center text-gray-400">
+                    <span>&copy; Copyright {{ date('Y') }}. All Rights Reserved</span>
                 </div>
             </div>
         </div>
     </section>
-   
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"></script>
+
+    <!-- Include Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2"></script>
+
 
 </body>
 
