@@ -30,6 +30,26 @@
             box-sizing: border-box;
             font-family: 'Outfit', system-ui, sans-serif;
         }
+
+         .review-card {
+            width: 300px;
+            transition: transform 2s ease-in-out;
+            border: 1px solid #e2e8f0;
+            background-color: #f7fafc;
+            padding: 1rem;
+            margin-right: 1rem; /* Add space between the cards */
+            border-radius: 0.5rem;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .review-content {
+            color: #4a5568;
+        }
     </style>
 </head>
 
@@ -666,7 +686,84 @@
             <!-- Popular Residences Section -->
             <section></section>
             <!-- Best Reviews Section -->
-            <section>
+          <div class="flex overflow-hidden">
+        <button id="moveLeft" class="bg-blue-500 text-white px-4 py-2 rounded-md mr-2">Move Left</button>
+        <button id="moveRight" class="bg-blue-500 text-white px-4 py-2 rounded-md">Move Right</button>
+    </div>
+    <div class="flex overflow-hidden mt-4">
+        <div id="reviewSlider" class="flex">
+            <!-- Review Cards -->
+            <div class="review-card p-4 rounded-lg shadow-md">
+                <p class="review-title">1</p>
+                <p class="review-content">The product exceeded my expectations. It's durable and reliable. I highly recommend it.</p>
+            </div>
+
+            <div class="review-card p-4 rounded-lg shadow-md">
+                <p class="review-title">2</p>
+                <p class="review-content">The customer service was exceptional. They were prompt in addressing my concerns and providing solutions.</p>
+            </div>
+
+            <div class="review-card p-4 rounded-lg shadow-md">
+                <p class="review-title">3</p>
+                <p class="review-content">I'm amazed by the quality of the product. It's definitely worth the price.</p>
+            </div>
+
+            <div class="review-card p-4 rounded-lg shadow-md">
+                <p class="review-title">4</p>
+                <p class="review-content">The shipping was incredibly fast. I received the product within just a few days.</p>
+            </div>
+
+            <div class="review-card p-4 rounded-lg shadow-md">
+                <p class="review-title">5</p>
+                <p class="review-content">I'm a satisfied customer. The overall experience was smooth, from ordering to using the product.</p>
+            </div>
+            <!-- End of Review Cards -->
+        </div>
+    </div>
+    <script>
+        const reviewSlider = document.getElementById('reviewSlider');
+        const reviewCards = document.querySelectorAll('.review-card');
+        const totalCards = reviewCards.length;
+        const cardWidth = 310; // Adjust this based on your card's width
+
+        let currentIndex = 0;
+        let currentTranslate = 0;
+
+        // Clone and append each card to the end
+        for (let i = 0; i < totalCards; i++) {
+            reviewSlider.appendChild(reviewCards[i].cloneNode(true));
+        }
+
+        function updateReviewSlider() {
+            reviewSlider.style.transform = `translateX(${currentTranslate}px)`;
+        }
+
+        function moveSliderRight() {
+            currentTranslate -= cardWidth;
+
+            if (currentTranslate <= -totalCards * cardWidth) {
+                currentTranslate = 0;
+            }
+
+            updateReviewSlider();
+        }
+
+        function moveSliderLeft() {
+            currentTranslate += cardWidth;
+
+            if (currentTranslate > 0) {
+                currentTranslate = -totalCards * cardWidth;
+            }
+
+            updateReviewSlider();
+        }
+
+        document.getElementById('moveLeft').addEventListener('click', moveSliderLeft);
+        document.getElementById('moveRight').addEventListener('click', moveSliderRight);
+
+        setInterval(moveSliderRight, 1000);
+    </script>
+            {{-- <section>
                 <div x-data="cardSlider()" x-init="init()" class="p-4 grid gap-6 w-full">
                     <div class="w-full flex justify-between">
                         <h1 class="text-4xl font-bold" style="letter-spacing: 2px">Best Reviews.</h1>
@@ -1299,7 +1396,7 @@
                         };
                     }
                 </script>
-            </section>
+            </section> --}}
             <!-- FAQ'S Section -->
             <section class="p-4 grid grid-cols-1 gap-6  lg:grid-cols-2">
                 <!-- Image Section -->
@@ -1536,8 +1633,7 @@
                                     class="inline-block text-base font-normal dark:text-gray-400">Home</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#"
-                                    class="inline-block text-base font-normal dark:text-gray-400">About
+                                <a href="#" class="inline-block text-base font-normal dark:text-gray-400">About
                                     Us</a>
                             </li>
                             <li class="mb-4">
@@ -1554,8 +1650,7 @@
                                     class="inline-block text-base font-normal dark:text-gray-400">Home</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#"
-                                    class="inline-block text-base font-normal dark:text-gray-400">About
+                                <a href="#" class="inline-block text-base font-normal dark:text-gray-400">About
                                     Us</a>
                             </li>
                             <li class="mb-4">
