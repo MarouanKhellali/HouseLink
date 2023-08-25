@@ -660,7 +660,844 @@
                 </div>
             </section>
             <!-- Popular Residences Section -->
-            
+            <section class="p-4 grid">
+                <div class="w-full">
+                    <h1 class="text-4xl font-bold" style="letter-spacing: 2px">Popular Residences .</h1>
+                </div>
+                <div class="w-full flex items-center justify-center py-8">
+                    <div
+                        class="max-w-screen-xl grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center py-6">
+                        <div class="relative w-96 lg:w-80 xl:w-96 md:w-96 grid gap-2 bg-white border border-gray-200 rounded-2xl hover:shadow-xl p-2 transform hover:scale-105 transition-transform ease-in-out duration-300 overflow-hidden"
+                            data-carousel="slide">
+                            <!-- Badge container inside the card -->
+                            <div
+                                class="absolute -rotate-45 top-6 -left-12 z-50 bg-yellow-300 text-white font-bold text-sm tracking-widest">
+                                <h1 class="px-16 py-1 ">RENT</h1>
+                            </div>
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-64 overflow-hidden rounded-lg">
+
+                                <!-- Heart icon -->
+                                <button type="button"
+                                    class="absolute text-gray-50 top-0 right-0 z-50 flex items-center justify-center p-2 cursor-pointer focus:outline-none"
+                                    id="heartIcon" onclick="toggleHeartColor()">
+                                    <span
+                                        class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-800/10 hover:bg-gray-50/30 focus:ring-gray-800/70 focus:outline-none">
+                                        <i class="ri-heart-fill text-2xl "></i>
+                                        <span class="sr-only">Next</span>
+                                    </span>
+                                </button>
+
+                                <script>
+                                    function toggleHeartColor() {
+                                        const heartIcon = document.getElementById('heartIcon');
+                                        heartIcon.classList.toggle('text-red-400');
+                                    }
+                                </script>
+
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/1.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/2.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/3.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Slider indicators -->
+                                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-2 left-1/2">
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0">
+                                    </button>
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1">
+                                    </button>
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2">
+                                    </button>
+                                </div>
+                                <!-- Slider controls -->
+                                <div class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none"
+                                    data-carousel-prev>
+                                    <span
+                                        class="inline-flex items-center justify-center w-6 h-6 cursor-pointer rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <svg class="w-3 h-3 text-white" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                                        </svg>
+                                        <span class="sr-only">Previous</span>
+                                    </span>
+                                </div>
+                                <div class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none"
+                                    data-carousel-next>
+                                    <span
+                                        class="inline-flex items-center justify-center w-6 h-6 cursor-pointer rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <svg class="w-3 h-3 text-white" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                                        </svg>
+                                        <span class="sr-only">Next</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900">
+                                Entire rental unit hosted by Carmen Y David
+                            </h5>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-200" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ml-3">
+                                    4.5
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-bold text-gray-900">
+                                    100.000 $
+                                </span>
+                                <a href="#"
+                                    class="text-white bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                    View Details
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="grid grid-cols-3 justify-between ">
+                                <div class="text-sm flex items-center justify-center border-r p-2 lg:px-0">
+                                    <i class="ri-hotel-bed-line"></i>
+                                    <p class="pl-2 font-medium">4 Bedrooms</p>
+                                </div>
+                                <div class="text-sm flex items-center justify-center border-r p-2 lg:px-0">
+                                    <i class="ri-map-2-line"></i>
+                                    <p class="pl-2 font-medium"> Casablanca </p>
+                                </div>
+                                <div class="text-sm flex items-center justify-center p-2 lg:px-0">
+                                    <i class="ri-map-pin-line"></i>
+                                    <p class="pl-2 font-medium"> City Center </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="relative w-96 lg:w-80 xl:w-96 md:w-96 grid gap-2 bg-white border border-gray-200 rounded-2xl hover:shadow-xl p-2 transform hover:scale-105 transition-transform ease-in-out duration-300 overflow-hidden"
+                            data-carousel="slide">
+                            <!-- Badge container inside the card -->
+                            <div
+                                class="absolute -rotate-45 top-6 -left-12 z-50 bg-yellow-300 text-white font-bold text-sm tracking-widest">
+                                <h1 class="px-16 py-1 ">RENT</h1>
+                            </div>
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-64 overflow-hidden rounded-lg">
+
+                                <!-- Heart icon -->
+                                <button type="button"
+                                    class="absolute text-gray-50 top-0 right-0 z-50 flex items-center justify-center p-2 cursor-pointer focus:outline-none"
+                                    id="heartIcon" onclick="toggleHeartColor()">
+                                    <span
+                                        class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-800/10 hover:bg-gray-50/30 focus:ring-gray-800/70 focus:outline-none">
+                                        <i class="ri-heart-fill text-2xl "></i>
+                                        <span class="sr-only">Next</span>
+                                    </span>
+                                </button>
+
+                                <script>
+                                    function toggleHeartColor() {
+                                        const heartIcon = document.getElementById('heartIcon');
+                                        heartIcon.classList.toggle('text-red-400');
+                                    }
+                                </script>
+
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/1.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/2.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/3.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Slider indicators -->
+                                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-2 left-1/2">
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0">
+                                    </button>
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1">
+                                    </button>
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2">
+                                    </button>
+                                </div>
+                                <!-- Slider controls -->
+                                <div class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none"
+                                    data-carousel-prev>
+                                    <span
+                                        class="inline-flex items-center justify-center w-6 h-6 cursor-pointer rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <svg class="w-3 h-3 text-white" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                                        </svg>
+                                        <span class="sr-only">Previous</span>
+                                    </span>
+                                </div>
+                                <div class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none"
+                                    data-carousel-next>
+                                    <span
+                                        class="inline-flex items-center justify-center w-6 h-6 cursor-pointer rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <svg class="w-3 h-3 text-white" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                                        </svg>
+                                        <span class="sr-only">Next</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900">
+                                Entire rental unit hosted by Carmen Y David
+                            </h5>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-200" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ml-3">
+                                    4.5
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-bold text-gray-900">
+                                    100.000 $
+                                </span>
+                                <a href="#"
+                                    class="text-white bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                    View Details
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="grid grid-cols-3 justify-between ">
+                                <div class="text-sm flex items-center justify-center border-r p-2 lg:px-0">
+                                    <i class="ri-hotel-bed-line"></i>
+                                    <p class="pl-2 font-medium">4 Bedrooms</p>
+                                </div>
+                                <div class="text-sm flex items-center justify-center border-r p-2 lg:px-0">
+                                    <i class="ri-map-2-line"></i>
+                                    <p class="pl-2 font-medium"> Casablanca </p>
+                                </div>
+                                <div class="text-sm flex items-center justify-center p-2 lg:px-0">
+                                    <i class="ri-map-pin-line"></i>
+                                    <p class="pl-2 font-medium"> City Center </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="relative w-96 lg:w-80 xl:w-96 md:w-96 grid gap-2 bg-white border border-gray-200 rounded-2xl hover:shadow-xl p-2 transform hover:scale-105 transition-transform ease-in-out duration-300 overflow-hidden"
+                            data-carousel="slide">
+                            <!-- Badge container inside the card -->
+                            <div
+                                class="absolute -rotate-45 top-6 -left-12 z-50 bg-yellow-300 text-white font-bold text-sm tracking-widest">
+                                <h1 class="px-16 py-1 ">RENT</h1>
+                            </div>
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-64 overflow-hidden rounded-lg">
+
+                                <!-- Heart icon -->
+                                <button type="button"
+                                    class="absolute text-gray-50 top-0 right-0 z-50 flex items-center justify-center p-2 cursor-pointer focus:outline-none"
+                                    id="heartIcon" onclick="toggleHeartColor()">
+                                    <span
+                                        class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-800/10 hover:bg-gray-50/30 focus:ring-gray-800/70 focus:outline-none">
+                                        <i class="ri-heart-fill text-2xl "></i>
+                                        <span class="sr-only">Next</span>
+                                    </span>
+                                </button>
+
+                                <script>
+                                    function toggleHeartColor() {
+                                        const heartIcon = document.getElementById('heartIcon');
+                                        heartIcon.classList.toggle('text-red-400');
+                                    }
+                                </script>
+
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/1.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/2.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/3.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Slider indicators -->
+                                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-2 left-1/2">
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0">
+                                    </button>
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1">
+                                    </button>
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2">
+                                    </button>
+                                </div>
+                                <!-- Slider controls -->
+                                <div class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none"
+                                    data-carousel-prev>
+                                    <span
+                                        class="inline-flex items-center justify-center w-6 h-6 cursor-pointer rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <svg class="w-3 h-3 text-white" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                                        </svg>
+                                        <span class="sr-only">Previous</span>
+                                    </span>
+                                </div>
+                                <div class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none"
+                                    data-carousel-next>
+                                    <span
+                                        class="inline-flex items-center justify-center w-6 h-6 cursor-pointer rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <svg class="w-3 h-3 text-white" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                                        </svg>
+                                        <span class="sr-only">Next</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900">
+                                Entire rental unit hosted by Carmen Y David
+                            </h5>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-200" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ml-3">
+                                    4.5
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-bold text-gray-900">
+                                    100.000 $
+                                </span>
+                                <a href="#"
+                                    class="text-white bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                    View Details
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="grid grid-cols-3 justify-between ">
+                                <div class="text-sm flex items-center justify-center border-r p-2 lg:px-0">
+                                    <i class="ri-hotel-bed-line"></i>
+                                    <p class="pl-2 font-medium">4 Bedrooms</p>
+                                </div>
+                                <div class="text-sm flex items-center justify-center border-r p-2 lg:px-0">
+                                    <i class="ri-map-2-line"></i>
+                                    <p class="pl-2 font-medium"> Casablanca </p>
+                                </div>
+                                <div class="text-sm flex items-center justify-center p-2 lg:px-0">
+                                    <i class="ri-map-pin-line"></i>
+                                    <p class="pl-2 font-medium"> City Center </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="relative w-96 lg:w-80 xl:w-96 md:w-96 grid gap-2 bg-white border border-gray-200 rounded-2xl hover:shadow-xl p-2 transform hover:scale-105 transition-transform ease-in-out duration-300 overflow-hidden"
+                            data-carousel="slide">
+                            <!-- Badge container inside the card -->
+                            <div
+                                class="absolute -rotate-45 top-6 -left-12 z-50 bg-yellow-300 text-white font-bold text-sm tracking-widest">
+                                <h1 class="px-16 py-1 ">RENT</h1>
+                            </div>
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-64 overflow-hidden rounded-lg">
+
+                                <!-- Heart icon -->
+                                <button type="button"
+                                    class="absolute text-gray-50 top-0 right-0 z-50 flex items-center justify-center p-2 cursor-pointer focus:outline-none"
+                                    id="heartIcon" onclick="toggleHeartColor()">
+                                    <span
+                                        class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-800/10 hover:bg-gray-50/30 focus:ring-gray-800/70 focus:outline-none">
+                                        <i class="ri-heart-fill text-2xl "></i>
+                                        <span class="sr-only">Next</span>
+                                    </span>
+                                </button>
+
+                                <script>
+                                    function toggleHeartColor() {
+                                        const heartIcon = document.getElementById('heartIcon');
+                                        heartIcon.classList.toggle('text-red-400');
+                                    }
+                                </script>
+
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/1.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/2.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/3.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Slider indicators -->
+                                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-2 left-1/2">
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0">
+                                    </button>
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1">
+                                    </button>
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2">
+                                    </button>
+                                </div>
+                                <!-- Slider controls -->
+                                <div class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none"
+                                    data-carousel-prev>
+                                    <span
+                                        class="inline-flex items-center justify-center w-6 h-6 cursor-pointer rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <svg class="w-3 h-3 text-white" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                                        </svg>
+                                        <span class="sr-only">Previous</span>
+                                    </span>
+                                </div>
+                                <div class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none"
+                                    data-carousel-next>
+                                    <span
+                                        class="inline-flex items-center justify-center w-6 h-6 cursor-pointer rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <svg class="w-3 h-3 text-white" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                                        </svg>
+                                        <span class="sr-only">Next</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900">
+                                Entire rental unit hosted by Carmen Y David
+                            </h5>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-200" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ml-3">
+                                    4.5
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-bold text-gray-900">
+                                    100.000 $
+                                </span>
+                                <a href="#"
+                                    class="text-white bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                    View Details
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="grid grid-cols-3 justify-between ">
+                                <div class="text-sm flex items-center justify-center border-r p-2 lg:px-0">
+                                    <i class="ri-hotel-bed-line"></i>
+                                    <p class="pl-2 font-medium">4 Bedrooms</p>
+                                </div>
+                                <div class="text-sm flex items-center justify-center border-r p-2 lg:px-0">
+                                    <i class="ri-map-2-line"></i>
+                                    <p class="pl-2 font-medium"> Casablanca </p>
+                                </div>
+                                <div class="text-sm flex items-center justify-center p-2 lg:px-0">
+                                    <i class="ri-map-pin-line"></i>
+                                    <p class="pl-2 font-medium"> City Center </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="relative w-96 lg:w-80 xl:w-96 md:w-96 grid gap-2 bg-white border border-gray-200 rounded-2xl hover:shadow-xl p-2 transform hover:scale-105 transition-transform ease-in-out duration-300 overflow-hidden"
+                            data-carousel="slide">
+                            <!-- Badge container inside the card -->
+                            <div
+                                class="absolute -rotate-45 top-6 -left-12 z-50 bg-yellow-300 text-white font-bold text-sm tracking-widest">
+                                <h1 class="px-16 py-1 ">RENT</h1>
+                            </div>
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-64 overflow-hidden rounded-lg">
+
+                                <!-- Heart icon -->
+                                <button type="button"
+                                    class="absolute text-gray-50 top-0 right-0 z-50 flex items-center justify-center p-2 cursor-pointer focus:outline-none"
+                                    id="heartIcon" onclick="toggleHeartColor()">
+                                    <span
+                                        class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-800/10 hover:bg-gray-50/30 focus:ring-gray-800/70 focus:outline-none">
+                                        <i class="ri-heart-fill text-2xl "></i>
+                                        <span class="sr-only">Next</span>
+                                    </span>
+                                </button>
+
+                                <script>
+                                    function toggleHeartColor() {
+                                        const heartIcon = document.getElementById('heartIcon');
+                                        heartIcon.classList.toggle('text-red-400');
+                                    }
+                                </script>
+
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/1.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/2.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/3.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Slider indicators -->
+                                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-2 left-1/2">
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0">
+                                    </button>
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1">
+                                    </button>
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2">
+                                    </button>
+                                </div>
+                                <!-- Slider controls -->
+                                <div class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none"
+                                    data-carousel-prev>
+                                    <span
+                                        class="inline-flex items-center justify-center w-6 h-6 cursor-pointer rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <svg class="w-3 h-3 text-white" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                                        </svg>
+                                        <span class="sr-only">Previous</span>
+                                    </span>
+                                </div>
+                                <div class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none"
+                                    data-carousel-next>
+                                    <span
+                                        class="inline-flex items-center justify-center w-6 h-6 cursor-pointer rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <svg class="w-3 h-3 text-white" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                                        </svg>
+                                        <span class="sr-only">Next</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900">
+                                Entire rental unit hosted by Carmen Y David
+                            </h5>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-200" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ml-3">
+                                    4.5
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-bold text-gray-900">
+                                    100.000 $
+                                </span>
+                                <a href="#"
+                                    class="text-white bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                    View Details
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="grid grid-cols-3 justify-between ">
+                                <div class="text-sm flex items-center justify-center border-r p-2 lg:px-0">
+                                    <i class="ri-hotel-bed-line"></i>
+                                    <p class="pl-2 font-medium">4 Bedrooms</p>
+                                </div>
+                                <div class="text-sm flex items-center justify-center border-r p-2 lg:px-0">
+                                    <i class="ri-map-2-line"></i>
+                                    <p class="pl-2 font-medium"> Casablanca </p>
+                                </div>
+                                <div class="text-sm flex items-center justify-center p-2 lg:px-0">
+                                    <i class="ri-map-pin-line"></i>
+                                    <p class="pl-2 font-medium"> City Center </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="relative w-96 lg:w-80 xl:w-96 md:w-96 grid gap-2 bg-white border border-gray-200 rounded-2xl hover:shadow-xl p-2 transform hover:scale-105 transition-transform ease-in-out duration-300 overflow-hidden"
+                            data-carousel="slide">
+                            <!-- Badge container inside the card -->
+                            <div
+                                class="absolute -rotate-45 top-6 -left-12 z-50 bg-yellow-300 text-white font-bold text-sm tracking-widest">
+                                <h1 class="px-16 py-1 ">RENT</h1>
+                            </div>
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-64 overflow-hidden rounded-lg">
+
+                                <!-- Heart icon -->
+                                <button type="button"
+                                    class="absolute text-gray-50 top-0 right-0 z-50 flex items-center justify-center p-2 cursor-pointer focus:outline-none"
+                                    id="heartIcon" onclick="toggleHeartColor()">
+                                    <span
+                                        class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-800/10 hover:bg-gray-50/30 focus:ring-gray-800/70 focus:outline-none">
+                                        <i class="ri-heart-fill text-2xl "></i>
+                                        <span class="sr-only">Next</span>
+                                    </span>
+                                </button>
+
+                                <script>
+                                    function toggleHeartColor() {
+                                        const heartIcon = document.getElementById('heartIcon');
+                                        heartIcon.classList.toggle('text-red-400');
+                                    }
+                                </script>
+
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/1.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/2.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out h-64" data-carousel-item>
+                                    <img src="/images/3.jpg" class="absolute block h-64 object-cover" alt="">
+                                </div>
+                                <!-- Slider indicators -->
+                                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-2 left-1/2">
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0">
+                                    </button>
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1">
+                                    </button>
+                                    <button type="button" class="w-2 h-2 rounded-full transition-all duration-300 "
+                                        aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2">
+                                    </button>
+                                </div>
+                                <!-- Slider controls -->
+                                <div class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none"
+                                    data-carousel-prev>
+                                    <span
+                                        class="inline-flex items-center justify-center w-6 h-6 cursor-pointer rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <svg class="w-3 h-3 text-white" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                                        </svg>
+                                        <span class="sr-only">Previous</span>
+                                    </span>
+                                </div>
+                                <div class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none"
+                                    data-carousel-next>
+                                    <span
+                                        class="inline-flex items-center justify-center w-6 h-6 cursor-pointer rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <svg class="w-3 h-3 text-white" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                                        </svg>
+                                        <span class="sr-only">Next</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900">
+                                Entire rental unit hosted by Carmen Y David
+                            </h5>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-200" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ml-3">
+                                    4.5
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-bold text-gray-900">
+                                    100.000 $
+                                </span>
+                                <a href="#"
+                                    class="text-white bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                    View Details
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="grid grid-cols-3 justify-between ">
+                                <div class="text-sm flex items-center justify-center border-r p-2 lg:px-0">
+                                    <i class="ri-hotel-bed-line"></i>
+                                    <p class="pl-2 font-medium">4 Bedrooms</p>
+                                </div>
+                                <div class="text-sm flex items-center justify-center border-r p-2 lg:px-0">
+                                    <i class="ri-map-2-line"></i>
+                                    <p class="pl-2 font-medium"> Casablanca </p>
+                                </div>
+                                <div class="text-sm flex items-center justify-center p-2 lg:px-0">
+                                    <i class="ri-map-pin-line"></i>
+                                    <p class="pl-2 font-medium"> City Center </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- Best Reviews Section -->
             <section class="p-4 grid">
                 <div class="w-full flex justify-between">
