@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>HouseLink</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -17,6 +17,9 @@
 
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
@@ -123,11 +126,11 @@
                                         {{-- <x-dropdown-link :href="route('#')">
                                             {{ __('Orders') }}
                                             </x-nav-link> --}}
-                                        @else
-                                            <x-dropdown-link :href="url('/dashboard')">
+                                    @else
+                                        <x-dropdown-link :href="url('/dashboard')">
 
-                                                {{ __('Dashboard') }}
-                                            </x-dropdown-link>
+                                            {{ __('Dashboard') }}
+                                        </x-dropdown-link>
                                     @endif
                                 @endauth
                             </ul>
@@ -561,106 +564,103 @@
             <!-- Services Section -->
             <section class="w-full flex items-center justify-center flex-col sm:flex-row gap-8 mb-4 px-8">
                 <!-- Cards -->
-                <div class="grid gap-8 grid-cols-3 p-4">
+                <div class="grid gap-14 grid-cols-1 p-4 lg:gap-8 lg:grid-cols-3">
                     <style>
                         .hovered {
                             transform: scale(1.1);
-                            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+                            box-shadow: 0px 10px 20px rgba(44, 44, 44, 0.137);
+                            transition: transform 0.4s ease-in-out, box-shadow 0.2s ease-in-out;
+                        }
+
+                        .hovered .ico {
+                            color: rgba(9, 1, 58, 0.76);
+                            background-color: white;
+                            box-shadow: 0px 10px 20px rgba(44, 44, 44, 0.137);
+                        }
+
+                        .card {
+                            width: 250px;
                         }
                     </style>
                     <!-- Card 1 -->
                     <div
-                        class="card text-center items-center justify-center max-w-xs p-6 border border-gray-200 rounded-lg transition-transform transform cursor-default">
+                        class="card relative grid gap-4 text-center items-center justify-center p-6 border border-gray-50 rounded-lg transition-transform transform cursor-default">
 
-                        <div class="grid justify-center items-center">
-                            <div class="flex items-center bg-blue-400 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor"
-                                    class="w-16 h-16 text-white grid justify-center">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
+                        <div
+                            class="ico absolute -top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 grid justify-center items-center h-14 w-14 rounded-full bg-gray-800 text-white border border-gray-50 ">
+
+                            <i
+                                class="fa-solid fa-house-circle-check h-full w-full text-2xl flex items-center justify-center"></i>
                         </div>
-                        <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">
+                        <h5 class="mt-3 text-lg font-bold tracking-tight text-gray-900">
                             Explore Listings
                         </h5>
-                        <p class="mb-3 font-normal text-xs text-gray-500">
+                        <p class="font-normal text-xs text-gray-500">
                             Browse through our wide range of available properties to find your dream home.
                         </p>
                     </div>
-                    <!-- Card 2 (Hover by Default) -->
+                    <!-- Card 2 Hovered -->
                     <div
-                        class="card hovered text-center items-center justify-center max-w-xs p-6 border border-gray-200 rounded-lg transition-transform transform  cursor-default">
+                        class="card hovered relative grid gap-4 text-center items-center justify-center p-6 border border-gray-50 rounded-lg transition-transform transform cursor-default">
 
-                        <div class="grid justify-center items-center">
-                            <div class="flex items-center bg-blue-400 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor"
-                                    class="w-16 h-16 text-white grid justify-center">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
+                        <div
+                            class="ico absolute -top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 grid justify-center items-center h-14 w-14 rounded-full bg-gray-800 text-white border border-gray-50 ">
+
+                            <i
+                                class="fa-regular fa-handshake h-full w-full text-2xl flex items-center justify-center"></i>
                         </div>
-                        <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">
-                            Sell house
+                        <h5 class="mt-3 text-lg font-bold tracking-tight text-gray-900">
+                            Explore Listings
                         </h5>
-                        <p class="mb-3 font-normal text-xs text-gray-500">
-                            Another paragraph with some information about selling houses. This card has a hover effect
-                            by default.
+                        <p class="font-normal text-xs text-gray-500">
+                            Browse through our wide range of available properties to find your dream home.
                         </p>
                     </div>
                     <!-- Card 3 -->
                     <div
-                        class="card text-center items-center justify-center max-w-xs p-6 border border-gray-200 rounded-lg transition-transform transform cursor-default">
+                        class="card relative grid gap-4 text-center items-center justify-center p-6 border border-gray-50 rounded-lg transition-transform transform cursor-default">
 
-                        <div class="grid justify-center items-center">
-                            <div class="flex items-center bg-blue-400 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor"
-                                    class="w-16 h-16 text-white grid justify-center">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
+                        <div
+                            class="ico absolute -top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 grid justify-center items-center h-14 w-14 rounded-full bg-gray-800 text-white border border-gray-50 ">
+
+                            <i class="fa-solid fa-key h-full w-full text-2xl flex items-center justify-center"></i>
                         </div>
-                        <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">
-                            Rent house
+                        <h5 class="mt-3 text-lg font-bold tracking-tight text-gray-900">
+                            Explore Listings
                         </h5>
-                        <p class="mb-3 font-normal text-xs text-gray-500">
-                            Renting a house can be a great option for those who prefer flexibility. Find more details
-                            about our available rental properties.
+                        <p class="font-normal text-xs text-gray-500">
+                            Browse through our wide range of available properties to find your dream home.
                         </p>
                     </div>
-                </div>
-                <script>
-                    const cards = document.querySelectorAll('.card');
-                    const card2 = document.querySelector('.card.hovered');
+                    <script>
+                        const cards = document.querySelectorAll('.card');
+                        const card2 = document.querySelector('.card.hovered');
 
-                    // Add event listeners for each card
-                    cards.forEach(card => {
-                        card.addEventListener('mouseover', () => {
-                            // Remove hovered class from all cards
-                            cards.forEach(otherCard => {
-                                otherCard.classList.remove('hovered');
+                        // Add event listeners for each card
+                        cards.forEach(card => {
+                            card.addEventListener('mouseover', () => {
+                                // Remove hovered class from all cards
+                                cards.forEach(otherCard => {
+                                    otherCard.classList.remove('hovered');
+                                });
+
+                                // Add hovered class to the current card
+                                card.classList.add('hovered');
+
                             });
 
-                            // Add hovered class to the current card
-                            card.classList.add('hovered');
-                        });
+                            card.addEventListener('mouseout', () => {
+                                // Remove hovered class from the current card
+                                card.classList.remove('hovered');
+                                card2.classList.add('hovered');
 
-                        card.addEventListener('mouseout', () => {
-                            // Remove hovered class from the current card
-                            card.classList.remove('hovered');
-                            // add hovered class from the current card2
-                            card2.classList.add('hovered');
+                            });
                         });
-                    });
-                </script>
+                    </script>
+                </div>
             </section>
             <!-- Popular Residences Section -->
-            <section></section>
+            
             <!-- Best Reviews Section -->
             <section class="p-4 grid">
                 <div class="w-full flex justify-between">
@@ -1293,8 +1293,8 @@
                         data-active-classes="text-gray-900" data-inactive-classes="text-gray-500">
                         <!-- FAQ Items... -->
                         <div class="py-4 mx-auto">
-                            <div id="accordion-flush" data-accordion="collapse" data-active-classes="text-gray-900"
-                                data-inactive-classes="text-gray-500">
+                            <div id="accordion-flush" data-accordion="collapse"
+                                data-active-classes="text-gray-900" data-inactive-classes="text-gray-500">
                                 <!-- FAQ Item 1 -->
                                 <h2 id="accordion-flush-heading-1">
                                     <button type="button"
@@ -1427,7 +1427,7 @@
             </section>
             <!-- Card Get Started -->
             <section class="p-4">
-                <div class="card my-8 flex w-full py-10 flex-col justify-center items-center flex-shrink-0 gap-8 text-white hover:shadow-2xl"
+                <div class="my-8 flex w-full py-10 flex-col justify-center items-center flex-shrink-0 gap-8 text-white hover:shadow-2xl"
                     style="border-radius: 16px; background: linear-gradient(135deg, #003F89 0.02%, #052851 48.19%, #006632 100%);">
                     <div class="grid gap-3 text-center ">
                         <h1 class="text-4xl font-bold " style="letter-spacing: 4px">
