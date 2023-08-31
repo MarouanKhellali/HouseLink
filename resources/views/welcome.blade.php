@@ -86,7 +86,7 @@
                         @if (Route::has('login'))
                             <a class="mr-1 " href="{{ route('login') }}">
                                 <button type="button"
-                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm py-2.5 px-5 text-center"
+                                    class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm py-2.5 px-5 text-center"
                                     style="letter-spacing: 1px ">
                                     Get In
                                 </button>
@@ -214,30 +214,35 @@
     <div class="w-full flex ml-auto relative">
         <!-- hero image and titel .. -->
         <div class="w-11/12 bg-cover bg-center flex"
-            style=" background-image: url('img.png');   height: 600px; width: 100%;">
-            <div class="w-full max-w-screen-xl flex items-center  mx-auto p-4">
-                <div class=" flex flex-wrap p-4 ">
-                    <div class=" w-full my-4">
-                        <h1 class="text-6xl font-black text-white mb-2"
-                            style="letter-spacing: 1.2rem ; font-size:70px ; font-weight:900; ">
-                            Find Your <br />Perfect <br /> Match
+        style="background-image: url('hero3.jpg'); height: 600px; width: 100%;">
+        <div class="w-full max-w-screen-xl flex items-center mx-auto p-4">
+            <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-between bg-gray-900/60">
+                <div class="flex flex-wrap p-4">
+                    <div class="w-full my-4">
+                        <h1 class="text-4xl md:text-6xl font-black text-white mb-2"
+                            style="letter-spacing: 1.2rem; font-size: 4rem; font-weight: 900;">
+                            Find Your <br class="md:hidden"/>Perfect <br class="md:hidden"/> Match
                         </h1>
-                        <p class="text-lg text-gray-300 " style="letter-spacing: 2px ">
+                        <p class="text-base md:text-lg text-gray-300" style="letter-spacing: 2px">
                             Ignite Your Imagination
                         </p>
-                        <p class="text-lg text-gray-300 mb-8" style="letter-spacing: 2px ">
+                        <p class="text-base md:text-lg text-gray-300 mb-8" style="letter-spacing: 2px">
                             HouseLink - Where Vision Meets Reality.
                         </p>
                         <button type="button"
-                            class="py-2.5 px-5 text-sm font-medium text-white focus:outline-none rounded-lg border border-white hover:bg-blue-700 hover:text-white focus:z-10 focus:ring-2 "
-                            style="letter-spacing: 2px ">
+                            class="py-2 px-4 md:py-2.5 md:px-5 text-xs md:text-sm font-medium text-white focus:outline-none rounded-lg border border-white hover:bg-green-700 hover:text-white focus:z-10 focus:ring-2"
+                            style="letter-spacing: 2px">
                             Get Started
                         </button>
                     </div>
-
+                </div>
+                <div class="flex flex-wrap p-4 md:p-16 items-center justify-center md:justify-end">
+                    <img src="{{ asset('mar.png') }}" alt="" class="max-w-full md:max-w-md">
                 </div>
             </div>
         </div>
+    </div>
+    
         <!-- Filter section -->
         <section class="absolute w-full  flex items-center justify-center px-4" style=" bottom: -8%">
             <div class=" py-6 px-8 border lg:flex rounded-lg shadow-lg hidden :max-w-screen-xl  mx-auto  backdrop-blur-md bg-white/30"
@@ -467,7 +472,7 @@
                 </div>
                 <!-- Filter Button -->
                 <button type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm py-2.5 px-5 text-center "
+                    class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm py-2.5 px-5 text-center "
                     style="letter-spacing: 1px ">
                     Search
                 </button>
@@ -784,7 +789,7 @@
                                     100.000 $
                                 </span>
                                 <a href="#"
-                                    class="text-white bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                    class="text-white bg-green-600 hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                     View Details
                                 </a>
                             </div>
@@ -922,7 +927,7 @@
                                     100.000 $
                                 </span>
                                 <a href="#"
-                                    class="text-white bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                    class="text-white bg-green-600 hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                     View Details
                                 </a>
                             </div>
@@ -1060,7 +1065,7 @@
                                     100.000 $
                                 </span>
                                 <a href="#"
-                                    class="text-white bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                    class="text-white bg-green-600 hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                     View Details
                                 </a>
                             </div>
@@ -1198,7 +1203,7 @@
                                     100.000 $
                                 </span>
                                 <a href="#"
-                                    class="text-white bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                    class="text-white bg-green-600 hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                     View Details
                                 </a>
                             </div>
@@ -1336,7 +1341,7 @@
                                     100.000 $
                                 </span>
                                 <a href="#"
-                                    class="text-white bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                    class="text-white bg-green-600 hover:bg-yellow-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                     View Details
                                 </a>
                             </div>
@@ -1474,7 +1479,7 @@
                                     100.000 $
                                 </span>
                                 <a href="#"
-                                    class="text-white bg-gray-900 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                    class="text-white bg-green-600 hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                     View Details
                                 </a>
                             </div>
@@ -2263,7 +2268,8 @@
                 </div>
             </section>
             <!-- Card Get Started -->
-            <section class="p-4">
+            <!-- Card Get Started -->
+            <section class="p-4 h-full h-auto">
                 <div class="my-8 flex w-full py-10 flex-col justify-center items-center flex-shrink-0 gap-8 text-white hover:shadow-2xl"
                     style="border-radius: 16px; background: linear-gradient(135deg, #003F89 0.02%, #052851 48.19%, #006632 100%);">
                     <div class="grid gap-3 text-center ">
@@ -2275,12 +2281,145 @@
                             released Purpose Design System.
                         </p>
                     </div>
-                    <button type="button"
+                    <button type="button" id="contactBtn"
                         class="py-2.5 px-5 text-sm font-medium text-white focus:outline-none rounded-lg border border-white hover:bg-blue-700 hover:text-white focus:z-10 focus:ring-2 "
                         style="letter-spacing: 2px;">
                         Get Started
                     </button>
                 </div>
+
+                <div id="contactForm" class="hidden z-[200]  fixed top-0 right-0 w-full h-screen overflow-auto" style="background-color: rgba(0, 0, 26, 0.877)">
+                    <div 
+                        class="w-full h-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <div class=" h-auto flex items-center justify-center p-8">
+                            <section class="relative w-full bg-gray-50 p-5 grid rounded-xl">
+                                <!--div1-->
+                                <h1 class="text-4xl font-bold mb-5 text-center" style="letter-spacing: 2px">Contact us .
+                                </h1>
+    
+                                <div class=" grid grid-cols-1 sm:grid-cols-1 xl:grid-cols-2  gap-2 ">
+                                    <!--div2-->
+                                    <div
+                                        class="w-full items-center justify-center grid grid-cols-1 sm:grid-cols-2 gap-4 p-8 ">
+                                        <!--div1-->
+                                        <div class="w-full grid items-center justify-center text-center gap-3 col-span-1">
+                                            <div
+                                                class="inline-block overflow-hidden text-xs text-white bg-blue-500 rounded-full w-44 h-44 sm:w-64 sm:h-64">
+                                                <img class="object-cover w-full h-full transition-all hover:scale-110"
+                                                    src="https://i.postimg.cc/bNyr5cJq/pexels-anastasia-shuraeva-5704720.jpg"
+                                                    alt="">
+                                            </div>
+                                            <h2 class="text-xl font-bold ">Khellali Marouan</h2>
+                                            <p class="text-sm text-blue-500 ">Developer</p>
+                                            <div class="flex gap-4 items-center justify-center">
+                                                <a class="inline-block text-gray-800  hover:text-pink-400  "
+                                                    href="#">
+                                                    <i class="fa-solid fa-envelope text-xl"></i>
+                                                </a>
+                                                <a class="inline-block text-gray-800 hover:text-gray-400 "
+                                                    href="#">
+                                                    <i class="fa-brands fa-github text-xl"></i>
+                                                </a>
+                                                <a class="inline-block text-gray-800  hover:text-blue-400"
+                                                    href="#">
+                                                    <i class="fa-brands fa-linkedin text-xl"></i>
+                                                </a>
+    
+                                            </div>
+                                        </div>
+                                        <!--div2-->
+                                        <div class="w-full grid items-center justify-center text-center gap-3 col-span-1">
+                                            <div
+                                                class="inline-block overflow-hidden text-xs text-white bg-blue-500 rounded-full w-44 h-44 sm:w-64 sm:h-64">
+                                                <img class="object-cover w-full h-full transition-all hover:scale-110"
+                                                    src="https://i.postimg.cc/bNyr5cJq/pexels-anastasia-shuraeva-5704720.jpg"
+                                                    alt="">
+                                            </div>
+                                            <h2 class="text-xl font-bold ">Samouh Aziz</h2>
+                                            <p class="text-sm text-blue-500 ">Developer</p>
+                                            <div class="flex gap-4 items-center justify-center">
+                                                <a class="inline-block text-gray-800  hover:text-pink-400  "
+                                                    href="#">
+                                                    <i class="fa-solid fa-envelope text-xl"></i>
+                                                </a>
+                                                <a class="inline-block text-gray-800 hover:text-gray-400 "
+                                                    href="#">
+                                                    <i class="fa-brands fa-github text-xl"></i>
+                                                </a>
+                                                <a class="inline-block text-gray-800  hover:text-blue-400"
+                                                    href="#">
+                                                    <i class="fa-brands fa-linkedin text-xl"></i>
+                                                </a>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="w-full grid grid-cols-1 gap-2">
+                                        <!-- component -->
+                                        <div class="flex items-center justify-center p-12">
+                                            <div class="mx-auto w-full max-w-[550px]">
+    
+                                                <form action="https://formbold.com/s/FORM_ID" method="POST">
+                                                    <div class="mb-5">
+    
+                                                        <input type="text" name="name" id="name"
+                                                            placeholder="Full Name"
+                                                            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                                    </div>
+                                                    <div class="mb-5">
+    
+                                                        <input type="email" name="email" id="email"
+                                                            placeholder="example@domain.com"
+                                                            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                                    </div>
+                                                    <div class="mb-5">
+    
+                                                        <input type="text" name="subject" id="subject"
+                                                            placeholder="Enter your subject"
+                                                            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                                    </div>
+                                                    <div class="mb-5">
+    
+                                                        <textarea rows="4" name="message" id="message" placeholder="Type your message"
+                                                            class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"></textarea>
+                                                    </div>
+                                                    <div>
+                                                        <button
+                                                            class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
+                                                            Submit
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="closeFormBtn"
+                                    class="absolute top-3 right-3 text-red-500 hover:bg-gray-200 w-6 h-6 flex items-center justify-center  rounded-full">
+                                    <i class="fas fa-times "></i>
+                                </button>
+                            </section>
+                        </div>
+                        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                const contactBtn = $("#contactBtn");
+                                const contactForm = $("#contactForm");
+                                const closeFormBtn = $("#closeFormBtn");
+    
+                                contactBtn.click(function() {
+                                    contactForm.removeClass("hidden");
+                                });
+    
+                                closeFormBtn.click(function() {
+                                    contactForm.addClass("hidden");
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+
             </section>
         </div>
     </div>
