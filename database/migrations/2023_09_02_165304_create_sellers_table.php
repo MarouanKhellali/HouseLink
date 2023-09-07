@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('sellers', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->unique();
-            $table->enum('type', ['company', 'Individual']);
+            $table->enum('type', ['company', 'person']);
             $table->string('card_id');
             $table->integer('phone');
             $table->string('city');
